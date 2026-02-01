@@ -1,7 +1,13 @@
 <?php
 class Controlador_Equipo extends Controlador_Admin_Base {
     
-    private $rutaEquipo = 'c:\\xampp2\\htdocs\\unmaut\\recursos\\imagenes\\equipo';
+    private $rutaEquipo;
+    
+    public function __construct() {
+        parent::__construct();
+        // Usar ruta relativa que funcione en cualquier servidor
+        $this->rutaEquipo = dirname(__DIR__, 2) . '/recursos/imagenes/equipo';
+    }
     
     public function verEquipo() {
         $this->cambiarSeleccion('equipo');
@@ -12,7 +18,7 @@ class Controlador_Equipo extends Controlador_Admin_Base {
             $archivos = scandir($this->rutaEquipo);
             foreach ($archivos as $archivo) {
                 if ($archivo !== '.' && $archivo !== '..' && preg_match('/\.(webp|png|jpg|jpeg)$/i', $archivo)) {
-                    $rutaCompleta = $this->rutaEquipo . '\\' . $archivo;
+                    $rutaCompleta = $this->rutaEquipo . '/' . $archivo;
                     $imagenes[] = [
                         'nombre' => $archivo,
                         'ruta' => importAsset('imagenes/equipo/' . $archivo),
@@ -79,12 +85,12 @@ class Controlador_Equipo extends Controlador_Admin_Base {
             $nombreArchivo = $nombreBase . '.' . $extension;
             $contador = 1;
             
-            while (file_exists($this->rutaEquipo . '\\' . $nombreArchivo)) {
+            while (file_exists($this->rutaEquipo . '/' . $nombreArchivo)) {
                 $nombreArchivo = $nombreBase . '-' . $contador . '.' . $extension;
                 $contador++;
             }
             
-            $rutaDestino = $this->rutaEquipo . '\\' . $nombreArchivo;
+            $rutaDestino = $this->rutaEquipo . '/' . $nombreArchivo;
             
             if (move_uploaded_file($archivo['tmp_name'], $rutaDestino)) {
                 $_SESSION['mensaje'] = [
@@ -126,7 +132,7 @@ class Controlador_Equipo extends Controlador_Admin_Base {
                 exit;
             }
             
-            $rutaImagen = $this->rutaEquipo . '\\' . $nombreImagen;
+            $rutaImagen = $this->rutaEquipo . '/' . $nombreImagen;
             
             if (file_exists($rutaImagen)) {
                 if (unlink($rutaImagen)) {
