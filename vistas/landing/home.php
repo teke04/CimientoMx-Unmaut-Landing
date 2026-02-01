@@ -187,7 +187,7 @@
                 <div class="my-[80px] flex flex-col gap-y-[80px]">
                     
                     <div style="border-radius: 20px; background: rgba(80, 70, 150, 0.30); backdrop-filter: blur(5px);"
-                        class="group px-[60px] py-[80px] flex flex-col relative gap-y-[40px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
+                        class="group px-[28px] lg:px-[60px] py-[80px] flex flex-col relative gap-y-[40px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
                         <div class="size-[100px] p-[20px] absolute top-[-50px] left-[60px] bg-[#504696] rounded-[20px] group-hover:bg-[#282D7D] group-focus:bg-[#282D7D] transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60" viewBox="0 0 62 60" fill="none" class="[&>g>path]:fill-white [&>g>path]:group-hover:fill-white [&>g>path]:group-focus:fill-white [&>g>path]:transition-colors [&>g>path]:duration-300">
                                 <g clip-path="url(#clip0_4162_2130)">
@@ -369,7 +369,7 @@
 
                     <div class="flex flex-col lg:flex-row gap-[80px]">
 
-                        <div class="group px-[60px] py-[80px] flex flex-col relative w-full gap-y-[40px] rounded-[20px] bg-[rgba(80,70,150,0.30)] backdrop-blur-[5px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
+                        <div class="group px-[28px] lg:px-[60px] py-[80px] flex flex-col relative w-full gap-y-[40px] rounded-[20px] bg-[rgba(80,70,150,0.30)] backdrop-blur-[5px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
                             <div class="size-[100px] p-[20px] absolute top-[-50px] left-[60px] bg-[#504696] group-hover:bg-[#282D7D] group-focus:bg-[#282D7D] rounded-[20px] transition-colors duration-300">
                                 <svg class="[&>g>path]:fill-white [&>g>path]:group-hover:fill-white [&>g>path]:group-focus:fill-white [&>g>path]:transition-colors [&>g>path]:duration-300" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <g clip-path="url(#clip0_4162_2134)">
@@ -471,7 +471,7 @@
 
                         </div>
 
-                        <div class="group px-[60px] py-[80px] flex flex-col relative gap-y-[40px] w-full rounded-[20px] bg-[rgba(80,70,150,0.30)] backdrop-blur-[5px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
+                        <div class="group px-[28px] lg:px-[60px] py-[80px] flex flex-col relative gap-y-[40px] w-full rounded-[20px] bg-[rgba(80,70,150,0.30)] backdrop-blur-[5px] hover:!bg-white focus:!bg-white transition-all duration-300 cursor-pointer" tabindex="0">
                             <div class="size-[100px] p-[20px] absolute top-[-50px] left-[60px] bg-[#504696] group-hover:bg-[#282D7D] group-focus:bg-[#282D7D] rounded-[20px] transition-colors duration-300">
                                 <svg class="[&>g>path]:fill-white [&>g>path]:group-hover:fill-white [&>g>path]:group-focus:fill-white [&>g>path]:transition-colors [&>g>path]:duration-300" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <g clip-path="url(#clip0_4162_2121)">
