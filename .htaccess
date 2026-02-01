@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /unmaut/
+# RewriteBase /unmaut/  # Comentado para que funcione tanto en local como en producción
 Options -Indexes
 
 # Protección de archivos sensibles
