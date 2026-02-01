@@ -36,7 +36,7 @@ class Controlador_Prospectos extends Controlador {
                         VALUES (:nombre, :telefono, :correo, :interes_id, :servicio_id, :landing_id)";
                 $params = [
                     ':nombre'      => $nombre,
-                    ':telefono'    => $telefono,
+                    ':telefono'    => $telefono,    
                     ':correo'      => $email,
                     ':interes_id'  => $interes_id,
                     ':servicio_id' => $servicio_id,
