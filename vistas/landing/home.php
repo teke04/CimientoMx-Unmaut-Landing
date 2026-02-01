@@ -6,7 +6,7 @@
     <?= configuracion('tag_manager_head') ?>
     <title><?= isset($meta_titulo) ? $meta_titulo : env('EMPRESA') ?></title>
     <meta name="description" content="<?= isset($meta_descripcion) ? htmlspecialchars($meta_descripcion) : '' ?>">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, follow">
 
     
 </head>
@@ -158,12 +158,12 @@
             
             <!-- Botones de navegación -->
             <div class="flex gap-[20px]">
-                <button id="btn-anterior" class="w-[50px] h-[50px] rounded-full bg-[#8F85D2] hover:bg-[#504696] text-white flex items-center justify-center transition-colors duration-200">
+                <button id="btn-anterior" aria-label="Ver miembro anterior del equipo" class="w-[50px] h-[50px] rounded-full bg-[#8F85D2] hover:bg-[#504696] text-white flex items-center justify-center transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-                <button id="btn-siguiente" class="w-[50px] h-[50px] rounded-full bg-[#8F85D2] hover:bg-[#504696] text-white flex items-center justify-center transition-colors duration-200">
+                <button id="btn-siguiente" aria-label="Ver siguiente miembro del equipo" class="w-[50px] h-[50px] rounded-full bg-[#8F85D2] hover:bg-[#504696] text-white flex items-center justify-center transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
@@ -608,7 +608,9 @@
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa de ubicación Parque Industrial Querétaro"
+                    aria-label="Mapa de Google mostrando la ubicación en Parque Industrial Querétaro">
                 </iframe>
             </div>
         </section>
