@@ -29,6 +29,9 @@ function inicializarRutas() {
     // Rutas de documentos técnicos
     crearRuta('sitemap.xml', 'Controlador_Documentos', 'sitemap');
     crearRuta('robots.txt', 'Controlador_Documentos', 'robots');
+    
+    // Ruta de aviso de privacidad
+    crearRuta('aviso-de-privacidad', 'Controlador_Landing', 'avisoPrivacidad');
 
     //Ruta de 404
     crearRuta('404', 'Controlador', 'show404');

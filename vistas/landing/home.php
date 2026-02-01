@@ -41,7 +41,7 @@
                 <div class="flex animate-scroll-mobile md:animate-scroll gap-[20px] will-change-transform">
                     <?php 
                         $logos = array();
-                        $ruta_logos = 'c:\\laragon\\www\\unmaut\\recursos\\imagenes\\logos-clientes';
+                        $ruta_logos = dirname(__DIR__, 2) . '/recursos/imagenes/logos-clientes';
                         if (is_dir($ruta_logos)) {
                             $archivos = scandir($ruta_logos);
                             foreach ($archivos as $archivo) {
@@ -55,8 +55,9 @@
                         // Mostrar logos dos veces para efecto infinito
                         for ($i = 0; $i < 2; $i++) {
                             foreach ($logos as $logo) {
+                                $urlLogo = rtrim(env('DOMINIO'), '/') . '/recursos/imagenes/logos-clientes/' . $logo;
                                 echo '<div class=" size-[120px] p-[20px] flex-shrink-0 bg-white rounded-[20px]">';
-                                echo '  <img src="' . importAsset('imagenes/logos-clientes/' . $logo) . '" alt="Logo cliente" class="w-full h-full object-contain"/>';
+                                echo '  <img src="' . $urlLogo . '" alt="Logo cliente" class="w-full h-full object-contain"/>';
                                 echo '</div>';
                             }
                         }

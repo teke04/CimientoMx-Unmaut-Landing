@@ -908,6 +908,18 @@ video {
   margin-top: 0.75rem;
 }
 
+.mb-\[25px\] {
+  margin-bottom: 25px;
+}
+
+.mb-\[50px\] {
+  margin-bottom: 50px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
 .block {
   display: block;
 }
@@ -1091,6 +1103,10 @@ video {
 
 .h-4 {
   height: 1rem;
+}
+
+.h-\[45px\] {
+  height: 45px;
 }
 
 .max-h-full {
@@ -1328,6 +1344,10 @@ video {
 
 .max-w-\[280px\] {
   max-width: 280px;
+}
+
+.max-w-\[900px\] {
+  max-width: 900px;
 }
 
 .flex-1 {
@@ -1691,6 +1711,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(20px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(10px * var(--tw-space-y-reverse));
 }
 
 .overflow-auto {
@@ -2576,6 +2602,18 @@ video {
   padding-top: 5%;
 }
 
+.pb-\[100px\] {
+  padding-bottom: 100px;
+}
+
+.pl-\[30px\] {
+  padding-left: 30px;
+}
+
+.pt-\[180px\] {
+  padding-top: 180px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2708,6 +2746,14 @@ video {
 
 .text-\[26px\] {
   font-size: 26px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[42px\] {
+  font-size: 42px;
 }
 
 .font-bold {
@@ -3389,6 +3435,16 @@ video {
   color: rgb(80 70 150 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-\[\#282D7D\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(40 45 125 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\#8F85D2\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(143 133 210 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3659,12 +3715,20 @@ video {
     display: block;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:table-cell {
     display: table-cell;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-\[60px\] {
+    height: 60px;
   }
 
   .md\:min-h-\[1020px\] {
@@ -3729,6 +3793,10 @@ video {
 
   .md\:text-\[70px\] {
     font-size: 70px;
+  }
+
+  .md\:text-\[52px\] {
+    font-size: 52px;
   }
 
   .md\:font-bold {

@@ -34,5 +34,9 @@ class Controlador_Landing extends Controlador {
             'servicios'        => $servicios
         ]);
     }
+    
+    public function avisoPrivacidad() {
+        $this->mostrar('landing/aviso-privacidad');
+    }
 }
 ?>
