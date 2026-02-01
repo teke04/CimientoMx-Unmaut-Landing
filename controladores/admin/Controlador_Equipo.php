@@ -38,6 +38,8 @@ class Controlador_Equipo extends Controlador_Admin_Base {
         $this->mostrar('admin/equipo/ver-equipo', [
             'usuario' => $_SESSION['usuario'],
             'imagenes' => $imagenes,
+            'rutaEquipo' => $this->rutaEquipo,
+            'dominioEnv' => env('DOMINIO'),
             'mensaje' => isset($_SESSION['mensaje']) ? $_SESSION['mensaje'] : null
         ]);
         

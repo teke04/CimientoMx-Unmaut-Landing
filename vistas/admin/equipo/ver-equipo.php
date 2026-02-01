@@ -69,6 +69,17 @@
                     <h2 class="text-xl font-semibold text-teven-primario dark:text-white mb-4">
                         Imágenes del equipo (<?= count($imagenes) ?>)
                     </h2>
+                    <!-- Debug Info -->
+                    <div class="bg-yellow-100 dark:bg-yellow-900 border border-yellow-300 dark:border-yellow-700 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-yellow-800 dark:text-yellow-200"><strong>Debug Info:</strong></p>
+                        <p class="text-xs text-yellow-700 dark:text-yellow-300 mt-1"><strong>Ruta física:</strong> <?= htmlspecialchars($rutaEquipo) ?></p>
+                        <p class="text-xs text-yellow-700 dark:text-yellow-300"><strong>DOMINIO (.env):</strong> <?= htmlspecialchars($dominioEnv) ?></p>
+                        <p class="text-xs text-yellow-700 dark:text-yellow-300"><strong>Directorio existe:</strong> <?= is_dir($rutaEquipo) ? 'SÍ' : 'NO' ?></p>
+                        <p class="text-xs text-yellow-700 dark:text-yellow-300"><strong>Total archivos:</strong> <?= count($imagenes) ?></p>
+                        <?php if (!empty($imagenes)): ?>
+                        <p class="text-xs text-yellow-700 dark:text-yellow-300 mt-2"><strong>Primera imagen URL:</strong> <?= htmlspecialchars($imagenes[0]['ruta']) ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
                 <?php if (empty($imagenes)): ?>
