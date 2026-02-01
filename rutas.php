@@ -21,14 +21,14 @@ function inicializarRutas() {
         crearRuta('pagina2', 'Controlador_Web', 'pagina2');
         crearRuta('pagina3', 'Controlador_Web', 'pagina3');
         crearRuta('contacto', 'Controlador_Web', 'contacto');
-        
-        // Rutas de documentos técnicos
-        crearRuta('sitemap.xml', 'Controlador_Documentos', 'sitemap');
-        crearRuta('robots.txt', 'Controlador_Documentos', 'robots');
         //crearRuta('aviso-de-privacidad', 'Controlador_Web', 'avisoPrivacidad');
     }
 
     // RUTAS COMUNES (disponibles en ambos modos)
+
+    // Rutas de documentos técnicos
+    crearRuta('sitemap.xml', 'Controlador_Documentos', 'sitemap');
+    crearRuta('robots.txt', 'Controlador_Documentos', 'robots');
 
     //Ruta de 404
     crearRuta('404', 'Controlador', 'show404');
@@ -56,6 +56,11 @@ function inicializarRutas() {
     crearRuta('admin/landings-borrar', 'Controlador_Landings', 'borrarLanding');
     crearRuta('admin/landings-editar', 'Controlador_Landings', 'editarLanding');
     crearRuta('admin/landings-crear', 'Controlador_Landings', 'crearLanding');
+    
+    // Rutas de equipo
+    crearRuta('admin/equipo', 'Controlador_Equipo', 'verEquipo');
+    crearRuta('admin/equipo-subir', 'Controlador_Equipo', 'subirImagen');
+    crearRuta('admin/equipo-eliminar', 'Controlador_Equipo', 'eliminarImagen');
     
     // Rutas de configuraciones
     crearRuta('admin/configuraciones', 'Controlador_Configuraciones', 'verconfiguraciones');

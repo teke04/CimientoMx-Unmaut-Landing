@@ -73,7 +73,16 @@ class Enrutador {
         if (env('ENVIRONMENT') === 'development') {
             $requestUri = str_replace(str_replace('http://localhost/', '', env('DOMINIO')), '', $_SERVER['REQUEST_URI']);
         }
+        
+        // Separar la URI de los parámetros GET
+        $uriParts = parse_url($requestUri);
+        $requestUri = isset($uriParts['path']) ? $uriParts['path'] : $requestUri;
         $requestUri = trim($requestUri, '/');
+
+        // DEBUG: Descomentar para ver qué URI se está procesando
+        // echo "URI procesada: '" . $requestUri . "'<br>";
+        // echo "Rutas disponibles: " . implode(', ', array_keys($enrutador->rutas)) . "<br>";
+        // die();
 
         if (array_key_exists($requestUri, $enrutador->rutas)) {
             $nombreControlador = $enrutador->rutas[$requestUri][0];

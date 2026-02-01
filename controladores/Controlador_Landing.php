@@ -27,6 +27,8 @@ class Controlador_Landing extends Controlador {
             'keyword'          => $sqlReply['keyword'],
             'h1'               => $sqlReply['h1'],
             'h2'               => $sqlReply['h2'],
+            'meta_titulo'      => $sqlReply['meta_titulo'],
+            'meta_descripcion' => $sqlReply['meta_descripcion'],
             'landing_id'       => $sqlReply['id'],
             'intereses'        => $intereses,
             'servicios'        => $servicios

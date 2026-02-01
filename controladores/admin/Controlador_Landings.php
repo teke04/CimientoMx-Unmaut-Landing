@@ -62,7 +62,11 @@ class Controlador_Landings extends Controlador_Admin_Base {
                     ':meta_descripcion' => $meta_descripcion
                 ];
                 db()->ejecutarConsulta($sql_insert, $params_insert);
-                $this->verLandings();
+                
+                // Establecer mensaje de éxito y redirigir
+                $_SESSION['mensaje_exito'] = "Landing '$keyword' creada exitosamente.";
+                header('Location: ' . ruta('admin/landings'));
+                exit;
             } else {
                 $this->mostrar('admin/landings/crear-landings', [
                     'usuario' => $_SESSION['usuario'],
@@ -157,7 +161,9 @@ class Controlador_Landings extends Controlador_Admin_Base {
         }
 
         // Revisar que la keyword no coincida con una ruta del sistema
-        if (array_key_exists($keyword, $this->RUTAS)) {
+        $enrutador = Enrutador::getInstance();
+        $rutasSistema = $enrutador->listarRutas();
+        if (array_key_exists($keyword, $rutasSistema)) {
             return [
                 'mensaje' => "La keyword '$keyword' coincide con una ruta del sistema. Por favor, elige otra."
             ];

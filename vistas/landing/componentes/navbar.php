@@ -1,84 +1,35 @@
-<nav class="navbarDiscreto fixed top-0 left-0 w-screen overflow-x-clip transiution-all duration-500 z-50" 
-     data-bg-class="bg-slate-600" 
-     data-shadow-class="shadow-2xl">
+<nav class="navbarDiscreto fixed top-0 left-0 w-screen overflow-x-clip transition-all duration-500 z-50 pt-[40px] px-[28px]" 
+     data-bg-class="" 
+     data-shadow-class="">
     <!--Vista del modo desktop -->
-    <div class="z-50 text-black w-screen px-[5%] py-4 flex justify-between items-center">
-        <a href="<?=ruta('')?>" class="inline-block transform transition-transform duration-500 hover:scale-125">
-            <img src="<?=importAsset('logo.svg')?>" alt="Logo" class="h-[30px]" loading="eager">
-        </a>
-        <button onclick="toggleMobileMenu()" class="block lg:hidden hover:scale-125 duration-500">
-            <svg class="w-[50px]" 
-                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <path fill="#000000" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"></path>
-            </svg>
+    <div class="z-50 mx-auto text-black w-full max-w-[1380px] flex justify-between items-center py-[30px] px-[60px] shadow-lg bg-white rounded-[40px]">
+        <button onclick="openModal()" class="bg-[#8F85D2] py-[16px] px-[23px] rounded-full text-white text-[20px] hover:bg-[#504696] duration-200">
+            <div class="flex flex-row gap-x-[20px] items-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_4292_358)">
+                        <path d="M19 2H18V1C18 0.734784 17.8946 0.48043 17.7071 0.292893C17.5196 0.105357 17.2652 0 17 0C16.7348 0 16.4804 0.105357 16.2929 0.292893C16.1054 0.48043 16 0.734784 16 1V2H8V1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0C6.73478 0 6.48043 0.105357 6.29289 0.292893C6.10536 0.48043 6 0.734784 6 1V2H5C3.67441 2.00159 2.40356 2.52888 1.46622 3.46622C0.528882 4.40356 0.00158786 5.67441 0 7L0 19C0.00158786 20.3256 0.528882 21.5964 1.46622 22.5338C2.40356 23.4711 3.67441 23.9984 5 24H19C20.3256 23.9984 21.5964 23.4711 22.5338 22.5338C23.4711 21.5964 23.9984 20.3256 24 19V7C23.9984 5.67441 23.4711 4.40356 22.5338 3.46622C21.5964 2.52888 20.3256 2.00159 19 2ZM2 7C2 6.20435 2.31607 5.44129 2.87868 4.87868C3.44129 4.31607 4.20435 4 5 4H19C19.7956 4 20.5587 4.31607 21.1213 4.87868C21.6839 5.44129 22 6.20435 22 7V8H2V7ZM19 22H5C4.20435 22 3.44129 21.6839 2.87868 21.1213C2.31607 20.5587 2 19.7956 2 19V10H22V19C22 19.7956 21.6839 20.5587 21.1213 21.1213C20.5587 21.6839 19.7956 22 19 22Z" fill="white"/>
+                        <path d="M12 16.5C12.8284 16.5 13.5 15.8284 13.5 15C13.5 14.1716 12.8284 13.5 12 13.5C11.1716 13.5 10.5 14.1716 10.5 15C10.5 15.8284 11.1716 16.5 12 16.5Z" fill="#374957"/>
+                        <path d="M6.99988 16.5C7.82831 16.5 8.49988 15.8284 8.49988 15C8.49988 14.1716 7.82831 13.5 6.99988 13.5C6.17145 13.5 5.49988 14.1716 5.49988 15C5.49988 15.8284 6.17145 16.5 6.99988 16.5Z" fill="#374957"/>
+                        <path d="M17.0001 16.5C17.8285 16.5 18.5001 15.8284 18.5001 15C18.5001 14.1716 17.8285 13.5 17.0001 13.5C16.1717 13.5 15.5001 14.1716 15.5001 15C15.5001 15.8284 16.1717 16.5 17.0001 16.5Z" fill="#374957"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4292_358">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            <span>Agendar cita</span>
+            </div>
         </button>
-        <!--Vista del modo desktop -->
-        <ul class="flex-row hidden lg:flex justify-start flex-grow pl-32">
-            <li class="mx-3 h-[30px] flex justify-center transform transition-all duration-200">
-                <button onclick="scrollHacia('seccion1')"
-                    class="px-8 text-center transform transition-transform duration-200 hover:scale-110">
-                    Sección 1
-                </button>
-            </li>
-            <li class="mx-3 h-[30px] flex justify-center transform transition-all duration-200">
-                <button onclick="scrollHacia('seccion2');"
-                    class="px-8 text-center transform transition-transform duration-200 hover:scale-110">
-                    Sección 2
-                </button>
-            </li>
-            <li class="mx-3 h-[30px] flex justify-center transform transition-all duration-200">
-                <button onclick="scrollHacia('seccion3');"
-                    class="px-8 text-center transform transition-transform duration-200 hover:scale-110">
-                    Sección 3
-                </button>
-            </li>
-        </ul>
-        <div class="hidden lg:flex gap-4 items-center">
-            <?php $telefono = configuracion('telefono'); if ($telefono): ?>
-            <a href="tel:<?= htmlspecialchars($telefono) ?>" 
-                class="border-2 rounded-full py-3 px-8 text-black hover:scale-105 transition-transform duration-200 flex items-center gap-2">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <img src="<?=importAsset('logo.svg')?>" alt="Logo" class="h-[60px]" loading="eager">
+        <button onclick="scrollto()" class="bg-[#504696] py-[16px] px-[23px] rounded-full text-white text-[20px] hover:bg-[#282D7D] duration-200">
+            <div clasS="flex flex-row gap-x-[20px] items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12.9609 1.0001C12.9609 0.734885 13.0663 0.480531 13.2538 0.292995C13.4413 0.105458 13.6957 0.000101607 13.9609 0.000101607C16.6122 0.0030132 19.154 1.05752 21.0287 2.93225C22.9035 4.80698 23.958 7.34883 23.9609 10.0001C23.9609 10.2653 23.8555 10.5197 23.668 10.7072C23.4805 10.8947 23.2261 11.0001 22.9609 11.0001C22.6957 11.0001 22.4413 10.8947 22.2538 10.7072C22.0663 10.5197 21.9609 10.2653 21.9609 10.0001C21.9585 7.8791 21.1149 5.84565 19.6151 4.34588C18.1153 2.8461 16.0819 2.00248 13.9609 2.0001C13.6957 2.0001 13.4413 1.89474 13.2538 1.70721C13.0663 1.51967 12.9609 1.26532 12.9609 1.0001ZM13.9609 6.0001C15.0218 6.0001 16.0392 6.42153 16.7893 7.17168C17.5395 7.92182 17.9609 8.93924 17.9609 10.0001C17.9609 10.2653 18.0663 10.5197 18.2538 10.7072C18.4413 10.8947 18.6957 11.0001 18.9609 11.0001C19.2261 11.0001 19.4805 10.8947 19.668 10.7072C19.8555 10.5197 19.9609 10.2653 19.9609 10.0001C19.9593 8.40929 19.3267 6.88409 18.2018 5.75922C17.0769 4.63434 15.5517 4.00169 13.9609 4.0001C13.6957 4.0001 13.4413 4.10546 13.2538 4.293C13.0663 4.48053 12.9609 4.73489 12.9609 5.0001C12.9609 5.26532 13.0663 5.51967 13.2538 5.70721C13.4413 5.89475 13.6957 6.0001 13.9609 6.0001ZM23.0539 16.7391C23.6334 17.3202 23.9588 18.1074 23.9588 18.9281C23.9588 19.7488 23.6334 20.536 23.0539 21.1171L22.1439 22.1661C13.9539 30.0071 -5.97607 10.0821 1.74392 1.8661L2.89392 0.866102C3.47569 0.302779 4.25585 -0.00884932 5.06562 -0.00136355C5.87539 0.00612221 6.64966 0.33212 7.22091 0.906102C7.25191 0.937102 9.10491 3.3441 9.10491 3.3441C9.65474 3.92173 9.96082 4.68903 9.95951 5.48651C9.95821 6.28398 9.64963 7.05028 9.09791 7.6261L7.93991 9.0821C8.58076 10.6392 9.52297 12.0543 10.7124 13.2462C11.9019 14.438 13.3151 15.3831 14.8709 16.0271L16.3359 14.8621C16.9118 14.3108 17.678 14.0026 18.4752 14.0015C19.2724 14.0004 20.0394 14.3064 20.6169 14.8561C20.6169 14.8561 23.0229 16.7081 23.0539 16.7391ZM21.6779 18.1931C21.6779 18.1931 19.2849 16.3521 19.2539 16.3211C19.0479 16.1168 18.7695 16.0022 18.4794 16.0022C18.1893 16.0022 17.9109 16.1168 17.7049 16.3211C17.6779 16.3491 15.6609 17.9561 15.6609 17.9561C15.525 18.0643 15.3632 18.1352 15.1916 18.1619C15.0199 18.1885 14.8442 18.17 14.6819 18.1081C12.6664 17.3577 10.8356 16.1828 9.31375 14.6632C7.79185 13.1435 6.61432 11.3145 5.86092 9.3001C5.79411 9.13556 5.77234 8.95619 5.79782 8.78044C5.8233 8.60469 5.89513 8.4389 6.00592 8.3001C6.00592 8.3001 7.61291 6.2821 7.63991 6.2561C7.84418 6.05009 7.95879 5.77172 7.95879 5.4816C7.95879 5.19149 7.84418 4.91312 7.63991 4.7071C7.60891 4.6771 5.76792 2.2821 5.76792 2.2821C5.55882 2.09461 5.28592 1.9942 5.00516 2.00145C4.72441 2.0087 4.45706 2.12306 4.25792 2.3211L3.10792 3.3211C-2.53407 10.1051 14.7369 26.4181 20.6819 20.8001L21.5929 19.7501C21.8064 19.5524 21.9346 19.2794 21.9505 18.9888C21.9663 18.6982 21.8686 18.4129 21.6779 18.1931Z" fill="white"/>
                 </svg>
-                <?= htmlspecialchars($telefono) ?>
-            </a>
-            <?php endif; ?>
-            <button onclick="scrollHacia('contacto');" 
-                class="border-2 rounded-full py-3 px-12 text-black">
-                Contacto
-            </button>
-        </div>
-    </div>
-    <!--Vista del modo mobile -->
-    <ul id="menu" onclick="toggleMobileMenu()" class="flex-col fixed top-0 left-0 w-screen text-slate-900 bg-black bg-opacity-80 h-screen z-50 transform translate-x-full transition-transform duration-500 lg:hidden">
-        <li class="border-b-2 border-black bg-white hover:bg-gray-200">
-            <button onclick="scrollHacia('seccion1')"
-            class="w-full h-full py-6 duration-500 flex items-center justify-center text-center text-[40px] hover:scale-110">Sección 1</button>
-        </li>
-        <li class="border-b-2 border-black bg-white hover:bg-gray-200">
-            <button onclick="scrollHacia('seccion2')"
-            class="w-full h-full py-6 duration-500 flex items-center justify-center text-center text-[40px] hover:scale-110">Sección 2</button>
-        </li>
-        <li class="border-b-2 border-black bg-white hover:bg-gray-200">
-            <button onclick="scrollHacia('seccion3')"
-            class="w-full h-full py-6 duration-500 flex items-center justify-center text-center text-[40px] hover:scale-110">Sección 3</button>
-        </li>
-        <li class="border-b-2 border-black bg-white hover:bg-gray-200">
-            <button onclick="scrollHacia('contacto')"
-            class="w-full h-full py-6 duration-500 flex items-center justify-center text-center text-[40px] hover:scale-110">Contacto</button>
-        </li>
-        <?php $telefono = configuracion('telefono'); if ($telefono): ?>
-        <li class="border-b-2 border-black bg-white hover:bg-gray-200">
-            <a href="tel:<?= htmlspecialchars($telefono) ?>"
-            class="w-full h-full py-6 duration-500 flex items-center justify-center text-center text-[40px] hover:scale-110 gap-4">
-                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Llamar
-            </a>
-        </li>
-        <?php endif; ?>
-    </ul>
+            <span>442 113 7720</span>
+            </div>
+        </button>
 </nav>
 
 <?=importarScript('navbar.js')?>

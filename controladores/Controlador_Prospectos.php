@@ -3,6 +3,8 @@ class Controlador_Prospectos extends Controlador {
 
     public function guardarLead() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            
             $nombre      = isset($_POST['nombre'])      ? trim($_POST['nombre'])      : null;
             $email       = isset($_POST['email'])       ? trim($_POST['email'])       : null;
             $telefono    = isset($_POST['tel'])         ? trim($_POST['tel'])         : null;
@@ -17,17 +19,17 @@ class Controlador_Prospectos extends Controlador {
                            ? (int)$_POST['servicio'] 
                            : null;
             
-            // Validar landing_id: debe existir en POST, no estar vacío y ser numérico, sino 0
-            $landing_id  = (isset($_POST['landing_id']) && $_POST['landing_id'] !== '' && is_numeric($_POST['landing_id'])) 
+            // Validar landing_id: debe existir en POST, no estar vacío y ser numérico
+            $landing_id  = (isset($_POST['landing_id']) && $_POST['landing_id'] !== '' && is_numeric($_POST['landing_id']) && (int)$_POST['landing_id'] > 0) 
                            ? (int)$_POST['landing_id'] 
-                           : 0;
+                           : null;
     
             if ($nombre && $email) {
     
                 // Convertir valores vacíos o NULL en NULL real para la BD
                 $interes_id = ($interes_id === '' || $interes_id === null) ? null : $interes_id;
                 $servicio_id = ($servicio_id === '' || $servicio_id === null) ? null : $servicio_id;
-                $landing_id = ($landing_id === '' || $landing_id === null) ? 0 : $landing_id;
+                // landing_id ya está validado correctamente arriba
 
                 // Insertar prospecto con campos opcionales
                 $sql = "INSERT INTO prospectos (nombre, telefono, correo, interes_id, servicio_id, landing_id) 

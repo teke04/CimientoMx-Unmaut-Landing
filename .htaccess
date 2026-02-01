@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteBase /unmaut/
 Options -Indexes
 
 # Protección de archivos sensibles

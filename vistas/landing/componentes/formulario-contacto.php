@@ -46,6 +46,9 @@
                 id="tel" 
                 name="tel" 
                 required
+                pattern="[0-9]{10}"
+                maxlength="10"
+                title="Ingresa un teléfono de 10 dígitos"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teven-primario focus:border-transparent outline-none transition"
                 placeholder="(555) 123-4567"
             >
@@ -62,20 +65,16 @@
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teven-primario focus:border-transparent outline-none transition"
             >
                 <option value="">Selecciona un servicio (opcional)</option>
-                <?php if (isset($servicios) && is_array($servicios)): ?>
-                    <?php foreach ($servicios as $servicio): ?>
-                        <option value="<?= htmlspecialchars($servicio['id']) ?>">
-                            <?= htmlspecialchars($servicio['servicio']) ?>
-                        </option>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                <option value="1">Servicios de Automatización</option>
+                <option value="2">Servicios Eléctricos</option>
+                <option value="3">Servicios Mecánicos</option>
             </select>
         </div>
 
         <!-- Botón de envío -->
         <button 
             type="submit"
-            class="w-full bg-teven-primario hover:bg-teven-secundario-2 text-white font-bold py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+            class="w-full bg-[#504696] hover:bg-white hover:text-[#504696] text-white font-bold py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl border-2 border-[#504696]"
         >
             Enviar mensaje
         </button>

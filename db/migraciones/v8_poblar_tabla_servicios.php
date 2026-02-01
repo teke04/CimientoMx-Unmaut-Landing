@@ -12,7 +12,7 @@ class V8PoblarTablaServicios {
     }
     
     public function ejecutar() {
-        $servicios = ['Servicio 1', 'Servicio 2', 'Servicio 3', 'Servicio 4', 'Servicio 5'];
+        $servicios = ['Servicios de Automatización', 'Servicios Eléctricos', 'Servicios Mecánicos'];
         
         foreach ($servicios as $servicio) {
             $sql = "INSERT IGNORE INTO servicios (servicio) VALUES (:servicio)";

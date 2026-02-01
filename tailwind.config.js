@@ -32,9 +32,11 @@ module.exports = {
           },
           backgroundImage: {
               'degradado-1': 'linear-gradient(to top, #5F3D7C, #8867A4)',
+              'gradient-morados': 'linear-gradient(0deg, #282D7D 0%, #8F85D2 100%)',
           },
           fontFamily: {
               inter : ['Inter', 'sans-serif'],
+              roboto : ['Roboto', 'sans-serif'],
           },
           fontWeight: {
               bold: '700',
@@ -48,11 +50,17 @@ module.exports = {
           animation: {
               'ping-slow': 'ping 2s infinite',
               'scale-pulse': 'scale-pulse 4s infinite',
+              'scroll': 'scroll 30s linear infinite',
+              'scroll-mobile': 'scroll 15s linear infinite',
           },
           keyframes: {
               'scale-pulse': {
                 '0%, 100%': { transform: 'scale(1)' },
                 '50%': { transform: 'scale(1.3)' },
+              },
+              'scroll': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
               },
           },
       },
