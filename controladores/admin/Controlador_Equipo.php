@@ -19,9 +19,11 @@ class Controlador_Equipo extends Controlador_Admin_Base {
             foreach ($archivos as $archivo) {
                 if ($archivo !== '.' && $archivo !== '..' && preg_match('/\.(webp|png|jpg|jpeg)$/i', $archivo)) {
                     $rutaCompleta = $this->rutaEquipo . '/' . $archivo;
+                    // Usar DOMINIO del .env para construir la URL completa
+                    $urlImagen = rtrim(env('DOMINIO'), '/') . '/recursos/imagenes/equipo/' . $archivo;
                     $imagenes[] = [
                         'nombre' => $archivo,
-                        'ruta' => importAsset('imagenes/equipo/' . $archivo),
+                        'ruta' => $urlImagen,
                         'fecha' => date('Y-m-d H:i:s', filemtime($rutaCompleta)),
                         'tamanio' => $this->formatBytes(filesize($rutaCompleta))
                     ];
