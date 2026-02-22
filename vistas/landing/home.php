@@ -583,36 +583,61 @@
             </p>
         </section>
 
-        <section class="w-screen flex flex-row items-center justify-center py-[80px] lg:py-[120px] px-[28px]">
-            <div class="w-full max-w-[1140px] gap-x-[30px] gap-y-[40px] flex flex-col lg:flex-row items-center justify-between">
-                <div class="flex flex-col gap-y-[20px] min-w-[320px]">
-                    <h3 class="text-[30px] text-[#282D7D]">
-                        Ubica nuestras oficinas
-                    </h3>
-                    <div class="flex flex-row items-center gap-x-[10px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <g clip-path="url(#clip0_2048_832)">
+        <section class="w-screen flex items-center justify-center py-[80px] lg:py-[120px] px-[28px]">
+            <div class="w-full max-w-[1140px] flex flex-col lg:flex-row gap-x-[30px] gap-y-[60px]">
+                <!-- Nave de automatización -->
+                <div class="flex flex-col w-full lg:w-1/2">
+                    <div class="flex flex-row items-center gap-x-[10px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_mapa_1)">
                                 <path d="M14.0002 7C13.0772 7 12.1749 7.2737 11.4075 7.78648C10.6401 8.29925 10.0419 9.02809 9.68873 9.88081C9.33552 10.7335 9.2431 11.6718 9.42317 12.5771C9.60323 13.4823 10.0477 14.3139 10.7003 14.9665C11.353 15.6191 12.1845 16.0636 13.0897 16.2437C13.995 16.4237 14.9333 16.3313 15.786 15.9781C16.6387 15.6249 17.3676 15.0268 17.8804 14.2593C18.3931 13.4919 18.6668 12.5896 18.6668 11.6667C18.6668 10.429 18.1752 9.242 17.3 8.36683C16.4248 7.49167 15.2378 7 14.0002 7ZM14.0002 14C13.5387 14 13.0875 13.8632 12.7038 13.6068C12.3201 13.3504 12.0211 12.986 11.8444 12.5596C11.6678 12.1332 11.6216 11.6641 11.7117 11.2115C11.8017 10.7588 12.0239 10.3431 12.3503 10.0168C12.6766 9.69043 13.0923 9.4682 13.545 9.37817C13.9976 9.28814 14.4667 9.33434 14.8931 9.51095C15.3195 9.68755 15.6839 9.98662 15.9403 10.3703C16.1967 10.7541 16.3335 11.2052 16.3335 11.6667C16.3335 12.2855 16.0877 12.879 15.6501 13.3166C15.2125 13.7542 14.619 14 14.0002 14Z" fill="#504696"/>
                                 <path d="M13.9999 28.0004C13.0175 28.0054 12.0482 27.775 11.1731 27.3284C10.2981 26.8819 9.54274 26.2322 8.97038 25.4337C4.52421 19.3005 2.26904 14.6899 2.26904 11.7289C2.26904 8.61767 3.50497 5.63389 5.70492 3.43393C7.90488 1.23397 10.8887 -0.00195312 13.9999 -0.00195312C17.1111 -0.00195312 20.0949 1.23397 22.2948 3.43393C24.4948 5.63389 25.7307 8.61767 25.7307 11.7289C25.7307 14.6899 23.4755 19.3005 19.0294 25.4337C18.457 26.2322 17.7017 26.8819 16.8266 27.3284C15.9516 27.775 14.9823 28.0054 13.9999 28.0004ZM13.9999 2.54488C11.5644 2.54766 9.2294 3.51639 7.50723 5.23856C5.78506 6.96073 4.81632 9.2957 4.81354 11.7312C4.81354 14.0762 7.02204 18.4127 11.0307 23.9415C11.371 24.4103 11.8175 24.7918 12.3335 25.0549C12.8496 25.3179 13.4206 25.4551 13.9999 25.4551C14.5791 25.4551 15.1501 25.3179 15.6662 25.0549C16.1823 24.7918 16.6287 24.4103 16.969 23.9415C20.9777 18.4127 23.1862 14.0762 23.1862 11.7312C23.1834 9.2957 22.2147 6.96073 20.4925 5.23856C18.7704 3.51639 16.4354 2.54766 13.9999 2.54488Z" fill="#504696"/>
                             </g>
                             <defs>
-                                <clipPath id="clip0_2048_832">
+                                <clipPath id="clip0_mapa_1">
                                 <rect width="28" height="28" fill="white"/>
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="text-[18px] text-[#1E1E1E]">Parque Industrial Querétaro</p>
+                        <h3 class="text-[28px] md:text-[36px] text-[#282D7D]">Nave de <strong class="text-[#504696]">automatización</strong></h3>
                     </div>
+                    <iframe src="https://maps.google.com/maps?q=EUROPARK+III,+QRO+11+135,+Galindas,+76116+Santiago+de+Queretaro,+Qro.&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full max-w-[440px] h-[400px] rounded-[20px]" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación Nave de automatización"
+                        aria-label="Mapa de Google mostrando la ubicación de la Nave de automatización">
+                    </iframe>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.3984746308194!2d-100.33946492451294!3d20.56366520428088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d344f2f0000001%3A0x1234567890abcdef!2sParque%20Industrial%20Quer%C3%A9taro!5e0!3m2!1ses!2smx!4v1738339200000!5m2!1ses!2smx" 
-                    class="w-full h-[450px] rounded-[20px] mt-[40px]" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Mapa de ubicación Parque Industrial Querétaro"
-                    aria-label="Mapa de Google mostrando la ubicación en Parque Industrial Querétaro">
-                </iframe>
+
+                <!-- Nave de maquinados -->
+                <div class="flex flex-col w-full lg:w-1/2">
+                    <div class="flex flex-row items-center gap-x-[10px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_mapa_2)">
+                                <path d="M14.0002 7C13.0772 7 12.1749 7.2737 11.4075 7.78648C10.6401 8.29925 10.0419 9.02809 9.68873 9.88081C9.33552 10.7335 9.2431 11.6718 9.42317 12.5771C9.60323 13.4823 10.0477 14.3139 10.7003 14.9665C11.353 15.6191 12.1845 16.0636 13.0897 16.2437C13.995 16.4237 14.9333 16.3313 15.786 15.9781C16.6387 15.6249 17.3676 15.0268 17.8804 14.2593C18.3931 13.4919 18.6668 12.5896 18.6668 11.6667C18.6668 10.429 18.1752 9.242 17.3 8.36683C16.4248 7.49167 15.2378 7 14.0002 7ZM14.0002 14C13.5387 14 13.0875 13.8632 12.7038 13.6068C12.3201 13.3504 12.0211 12.986 11.8444 12.5596C11.6678 12.1332 11.6216 11.6641 11.7117 11.2115C11.8017 10.7588 12.0239 10.3431 12.3503 10.0168C12.6766 9.69043 13.0923 9.4682 13.545 9.37817C13.9976 9.28814 14.4667 9.33434 14.8931 9.51095C15.3195 9.68755 15.6839 9.98662 15.9403 10.3703C16.1967 10.7541 16.3335 11.2052 16.3335 11.6667C16.3335 12.2855 16.0877 12.879 15.6501 13.3166C15.2125 13.7542 14.619 14 14.0002 14Z" fill="#504696"/>
+                                <path d="M13.9999 28.0004C13.0175 28.0054 12.0482 27.775 11.1731 27.3284C10.2981 26.8819 9.54274 26.2322 8.97038 25.4337C4.52421 19.3005 2.26904 14.6899 2.26904 11.7289C2.26904 8.61767 3.50497 5.63389 5.70492 3.43393C7.90488 1.23397 10.8887 -0.00195312 13.9999 -0.00195312C17.1111 -0.00195312 20.0949 1.23397 22.2948 3.43393C24.4948 5.63389 25.7307 8.61767 25.7307 11.7289C25.7307 14.6899 23.4755 19.3005 19.0294 25.4337C18.457 26.2322 17.7017 26.8819 16.8266 27.3284C15.9516 27.775 14.9823 28.0054 13.9999 28.0004ZM13.9999 2.54488C11.5644 2.54766 9.2294 3.51639 7.50723 5.23856C5.78506 6.96073 4.81632 9.2957 4.81354 11.7312C4.81354 14.0762 7.02204 18.4127 11.0307 23.9415C11.371 24.4103 11.8175 24.7918 12.3335 25.0549C12.8496 25.3179 13.4206 25.4551 13.9999 25.4551C14.5791 25.4551 15.1501 25.3179 15.6662 25.0549C16.1823 24.7918 16.6287 24.4103 16.969 23.9415C20.9777 18.4127 23.1862 14.0762 23.1862 11.7312C23.1834 9.2957 22.2147 6.96073 20.4925 5.23856C18.7704 3.51639 16.4354 2.54766 13.9999 2.54488Z" fill="#504696"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_mapa_2">
+                                <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <h3 class="text-[28px] md:text-[36px] text-[#282D7D]">Nave de <strong class="text-[#504696]">maquinados</strong></h3>
+                    </div>
+                    <iframe src="https://maps.google.com/maps?q=20.5757102,-100.4886429&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full max-w-[440px] h-[400px] rounded-[20px]" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación Nave de maquinados"
+                        aria-label="Mapa de Google mostrando la ubicación de la Nave de maquinados">
+                    </iframe>
+                </div>
             </div>
         </section>
 
