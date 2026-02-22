@@ -25,8 +25,8 @@
 
             <div class="w-full max-w-[1380px] flex items-center justify-left z-30 relative pt-[100px]">
                 <div class="flex flex-col w-full max-w-[1020px] gap-y-[20px]">
-                    <h1 class="text-[38px] md:text-[70px] font-semibold md:font-bold"><?= isset($h1) ? $h1 : 'Integración y Automatización Industrial de Alta Fiabilidad' ?></h1>
-                    <h2 class="text-[28px] md:text-[36px]"><?= isset($h2) ? $h2 : 'En INMAUT desarrollamos soluciones de automatización, eléctricas y mecánicas a la medida, cumpliendo los criterios y normas de calidad de la industria, con enfoque en mejora continua.' ?></h2>
+                    <h1 class="text-[38px] md:text-[70px] font-semibold md:font-bold"><?= $h1 ?></h1>
+                    <h2 class="text-[28px] md:text-[36px]"><?= $h2 ?></h2>
                     <button onclick="openModal()" class="text-[#504696] bg-white rounded-full py-[16px] px-[32px] w-fit font-medium text-[20px] duration-200 hover:bg-[#8F85D2] hover:text-white">
                         Más información
                     </button>
@@ -121,6 +121,17 @@
             <div class="w-full h-[425px] flex items-center">
                 <div id="slider-equipo" class="flex gap-[20px] transition-transform duration-500 ease-in-out items-center pl-[80px] md:pl-[150px]">
                     <?php 
+                        // Datos de los miembros del equipo
+                        $equipo_datos = [
+                            'equipo-1.webp' => ['nombre' => 'Marco González', 'cargo' => 'Director Ejecutivo'],
+                            'equipo-2.webp' => ['nombre' => 'Juan Peñuñuri', 'cargo' => 'Director Operativo'],
+                            'equipo-3.webp' => ['nombre' => 'Carmen Ríos', 'cargo' => 'Ing. Kaizen'],
+                            'equipo-4.webp' => ['nombre' => 'Daniel Mata', 'cargo' => 'Ing. de Diseño Mecánico'],
+                            'equipo-5.webp' => ['nombre' => 'Gael Rangel', 'cargo' => 'Ing. de Automatización Jr.'],
+                            'equipo-6.webp' => ['nombre' => 'Karen Rodríguez', 'cargo' => 'Ing. Logística y compras técnicas'],
+                            'equipo-7.webp' => ['nombre' => 'Luis Jiménez', 'cargo' => 'Ing. de Programación'],
+                        ];
+                    
                         $imagenes_equipo = array();
                         $ruta_equipo = dirname(__DIR__, 2) . '/recursos/imagenes/equipo';
                         if (is_dir($ruta_equipo)) {
@@ -141,6 +152,10 @@
                                 $tamanio = $indexReal === count($imagenes_equipo) ? 'w-[325px] h-[425px]' : 'w-[208px] h-[283px]';
                                 $imagenUrl = importAsset('imagenes/equipo/' . $imagen);
                                 
+                                // Obtener datos del miembro del equipo
+                                $nombre = isset($equipo_datos[$imagen]) ? $equipo_datos[$imagen]['nombre'] : '';
+                                $cargo = isset($equipo_datos[$imagen]) ? $equipo_datos[$imagen]['cargo'] : '';
+                                
                                 if ($activo === 'filtro-azul') {
                                     // Imagen con filtro azul
                                     $estilo = 'transition: all 0.5s ease-in-out; border-radius: 20px; background: linear-gradient(0deg, rgba(40, 45, 125, 0.37) 0%, rgba(40, 45, 125, 0.37) 100%), linear-gradient(0deg, #282D7D 0%, #282D7D 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(' . $imagenUrl . ') lightgray 50% / cover no-repeat; background-blend-mode: multiply, color, normal, normal;';
@@ -149,7 +164,14 @@
                                     $estilo = 'transition: all 0.5s ease-in-out; border-radius: 20px; background: url(' . $imagenUrl . ') lightgray 50% / cover no-repeat;';
                                 }
                                 
-                                echo '<div class="imagen-slider ' . $tamanio . ' flex-shrink-0 ' . $activo . '" data-index="' . $indexReal . '" data-original-index="' . $index . '" style="' . $estilo . '">';
+                                $displayInfo = $activo === 'imagen-activa' ? 'flex' : 'hidden';
+                                
+                                echo '<div class="imagen-slider ' . $tamanio . ' flex-shrink-0 ' . $activo . ' relative overflow-hidden" data-index="' . $indexReal . '" data-original-index="' . $index . '" data-nombre="' . htmlspecialchars($nombre) . '" data-cargo="' . htmlspecialchars($cargo) . '" style="' . $estilo . '">';
+                                echo '  <div class="overlay-gradient absolute inset-0 ' . $displayInfo . '" style="border-radius: 20px; background: linear-gradient(180deg, rgba(40, 45, 125, 0.00) 50.12%, rgba(40, 45, 125, 0.80) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);"></div>';
+                                echo '  <div class="info-miembro absolute bottom-0 left-0 right-0 p-[20px] ' . $displayInfo . ' flex-col items-start justify-end text-white z-10">';
+                                echo '    <h3 class="nombre-miembro text-[20px] md:text-[24px] font-semibold leading-tight">' . htmlspecialchars($nombre) . '</h3>';
+                                echo '    <p class="cargo-miembro text-[14px] md:text-[16px] mt-[4px] leading-tight">' . htmlspecialchars($cargo) . '</p>';
+                                echo '  </div>';
                                 echo '</div>';
                             }
                         }

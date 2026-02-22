@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function actualizarSlider(conTransicion = true) {
         // Primero actualizar los estilos de todas las imágenes
         imagenes.forEach((imagen, index) => {
+            const infoMiembro = imagen.querySelector('.info-miembro');
+            const overlayGradient = imagen.querySelector('.overlay-gradient');
+            
             // Controlar la transición de cada imagen
             if (conTransicion) {
                 imagen.style.transition = 'all 0.5s ease-in-out';
@@ -28,6 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 imagen.classList.add('imagen-activa', 'w-[325px]', 'h-[425px]');
                 imagen.style.opacity = '1';
                 imagen.style.background = `url(${imagenUrl}) lightgray 50% / cover no-repeat`;
+                
+                // Mostrar información del miembro y overlay
+                if (infoMiembro) {
+                    infoMiembro.classList.remove('hidden');
+                    infoMiembro.classList.add('flex');
+                }
+                if (overlayGradient) {
+                    overlayGradient.classList.remove('hidden');
+                    overlayGradient.classList.add('flex');
+                }
             } else if (index === indiceActual - 1) {
                 // Imagen anterior a la activa: oculta
                 imagen.classList.remove('imagen-activa', 'w-[325px]', 'h-[425px]');
@@ -35,6 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 imagen.style.opacity = '0';
                 imagen.style.background = `linear-gradient(0deg, rgba(40, 45, 125, 0.37) 0%, rgba(40, 45, 125, 0.37) 100%), linear-gradient(0deg, #282D7D 0%, #282D7D 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(${imagenUrl}) lightgray 50% / cover no-repeat`;
                 imagen.style.backgroundBlendMode = 'multiply, color, normal, normal';
+                
+                // Ocultar información del miembro y overlay
+                if (infoMiembro) {
+                    infoMiembro.classList.remove('flex');
+                    infoMiembro.classList.add('hidden');
+                }
+                if (overlayGradient) {
+                    overlayGradient.classList.remove('flex');
+                    overlayGradient.classList.add('hidden');
+                }
             } else {
                 // Imágenes inactivas: pequeñas y con filtro
                 imagen.classList.remove('imagen-activa', 'w-[325px]', 'h-[425px]', 'opacity-0');
@@ -42,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 imagen.style.opacity = '1';
                 imagen.style.background = `linear-gradient(0deg, rgba(40, 45, 125, 0.37) 0%, rgba(40, 45, 125, 0.37) 100%), linear-gradient(0deg, #282D7D 0%, #282D7D 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(${imagenUrl}) lightgray 50% / cover no-repeat`;
                 imagen.style.backgroundBlendMode = 'multiply, color, normal, normal';
+                
+                // Ocultar información del miembro y overlay
+                if (infoMiembro) {
+                    infoMiembro.classList.remove('flex');
+                    infoMiembro.classList.add('hidden');
+                }
+                if (overlayGradient) {
+                    overlayGradient.classList.remove('flex');
+                    overlayGradient.classList.add('hidden');
+                }
             }
         });
         

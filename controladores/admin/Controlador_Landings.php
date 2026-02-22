@@ -94,7 +94,7 @@ class Controlador_Landings extends Controlador_Admin_Base {
             $h2               = isset($_POST['h2']) ? trim($_POST['h2']) : null;
             $meta_titulo      = isset($_POST['meta_titulo']) ? trim($_POST['meta_titulo']) : null;
             $meta_descripcion = isset($_POST['meta_descripcion']) ? trim($_POST['meta_descripcion']) : null;
-            $keyword_id       = isset($_POST['keyword_id']) ? trim($_POST['keyword_id']) : null;
+            $keyword_id       = isset($_POST['keyword_id']) ? (int)trim($_POST['keyword_id']) : null;
             if ($keyword && $h1 && $h2 && $meta_titulo && $meta_descripcion) {
                 // Validar la keyword (excluyendo el registro actual)
                 $error = $this->validarKeyword($keyword, $keyword_id);
@@ -164,9 +164,14 @@ class Controlador_Landings extends Controlador_Admin_Base {
         $enrutador = Enrutador::getInstance();
         $rutasSistema = $enrutador->listarRutas();
         if (array_key_exists($keyword, $rutasSistema)) {
-            return [
-                'mensaje' => "La keyword '$keyword' coincide con una ruta del sistema. Por favor, elige otra."
-            ];
+            // Si la ruta pertenece a una landing (no es una ruta real del sistema), no es conflicto
+            // ya que la validación de duplicados en la BD se encarga de esos casos
+            $rutaInfo = $rutasSistema[$keyword];
+            if ($rutaInfo[0] !== 'Controlador_Landing') {
+                return [
+                    'mensaje' => "La keyword '$keyword' coincide con una ruta del sistema. Por favor, elige otra."
+                ];
+            }
         }
 
         // Si llegamos aquí, la keyword es válida
