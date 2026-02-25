@@ -69,7 +69,7 @@
 
         <section id="seccion1" class="w-screen flex items-center justify-center relative px-[28px] py-[80px] md:py-[120px]">
             <div class="w-full max-w-[1140px] flex flex-col-reverse lg:flex-row justify-between items-center gap-x-[30px] gap-y-[60px]">
-                <img src="<?=importAsset('imagenes/maquinaria.webp')?>" alt="maquinaria" class="w-full max-w-[440px] h-auto object-cover object-center"/>
+                <img src="<?=importAsset('imagenes/foto-s1.png')?>" alt="maquinaria" class="w-full max-w-[440px] h-auto object-cover object-center"/>
                 <div class="flex flex-col w-full max-w-[560px]">
                     <h2 class="text-[28px] md:text-[36px] text-[#282D7D]"><span class="text-[50px] md:text-[70px] font-bold bg-gradient-morados bg-clip-text text-transparent">+15 años</span><br class="mt-[10px]">de experencia nos respaldan</h2>
                     <ul class="flex flex-col py-[60px] gap-y-[30px]">
