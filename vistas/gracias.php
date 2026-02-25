@@ -18,7 +18,7 @@
 
         <div class="w-full max-w-[1230px] flex flex-row items-center relative z-40">
             <div class="flex flex-col w-full max-w-[812px]">
-                <img src="<?=importAsset('imagenes/logo-blanco.svg')?>" alt="Icono de gracias" class="w-[340px]" loading="eager">
+                <img src="<?=importAsset('imagenes/LOGO-blanco.svg')?>" alt="Icono de gracias" class="w-[340px]" loading="eager">
                 <h1 class="mt-[60px] text-[50px] font-bold text-[#FFF]">
                     Hemos recibido tu información, ¡muchas gracias por contactarnos!
                 </h1>

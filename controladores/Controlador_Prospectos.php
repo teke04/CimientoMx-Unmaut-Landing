@@ -78,6 +78,10 @@ class Controlador_Prospectos extends Controlador {
                 ];
                 
                 // Agregar campos opcionales solo si tienen valor
+                if ($keyword) {
+                    $datosEmail['keyword'] = $keyword;
+                }
+                
                 if ($interes_texto) {
                     $datosEmail['interes'] = $interes_texto;
                 }

@@ -56,10 +56,9 @@
             <div class="info">
                 <p><span>Keyword:</span>  <?= isset($keyword)  ? $keyword  : "N/A" ?></p>
                 <p><span>Nombre:</span>   <?= isset($nombre)   ? $nombre   : "N/A" ?></p>
-                <p><span>Telefono:</span> <?= isset($telefono) ? $telefono : "N/A" ?></p>
+                <p><span>Teléfono:</span> <?= isset($telefono) ? $telefono : "N/A" ?></p>
                 <p><span>Correo:</span>   <?= isset($correo)   ? $correo   : "N/A" ?></p>
-                <p><span>interes:</span>  <?= isset($interes)  ? $interes  : "N/A" ?></p>
-                <p><span>Estado:</span>   <?= isset($estado)   ? $estado   : "N/A" ?></p>
+                <p><span>Servicio:</span> <?= isset($servicio) ? $servicio : "N/A" ?></p>
             </div>
         </div>
         <div class="footer">
