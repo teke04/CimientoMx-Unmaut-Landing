@@ -36,7 +36,7 @@
         </section>
 
         <section id="seccion2" class="w-screen flex flex-col items-center justify-center relative bg-[#EBEBEB] py-[80px] md:py-[120px] overflow-hidden">
-            <h2 class="text-[28px] px-[28px] md:text-[36px] text-[#504696] text-center">La industria nos elige porque nuestra calidad es <strong>demostrable</strong></h2>
+            <h2 class="text-[28px] px-[28px] md:text-[36px] text-[#504696] text-center">La industria nos elige porque <strong>nuestra calidad es demostrable</strong></h2>
             <div class="w-full mt-[40px] md:mt-[80px] overflow-hidden">
                 <div class="flex animate-scroll-mobile md:animate-scroll gap-[20px] will-change-transform">
                     <?php 
@@ -115,7 +115,7 @@
         </section>
 
         <section class="w-screen bg-[#EBEBEB] py-[80px] md:py-[120px] flex flex-col items-center justify-center gap-[40px]">
-            <h2 class="text-[28px] md:text-[36px] text-[#282D7D] text-center px-[28px] w-full max-w-[1140px] ">Contamos con un equipo <strong>altamente capacitado</strong> para desarrollar soluciones hechas a la medida de tu empresa.</h2>
+            <h2 class="text-[28px] md:text-[36px] text-[#282D7D] text-center px-[28px] w-full max-w-[1140px] ">Detrás de INMAUT hay personas apasionadas. Conoce a algunas de las mentes y el talento que hacen posible nuestra innovación.</h2>
             
             <!-- Slider de imágenes -->
             <div class="w-full h-[425px] flex items-center">
@@ -125,11 +125,11 @@
                         $equipo_datos = [
                             'equipo-1.webp' => ['nombre' => 'Marco González', 'cargo' => 'Director Ejecutivo'],
                             'equipo-2.webp' => ['nombre' => 'Juan Peñuñuri', 'cargo' => 'Director Operativo'],
-                            'equipo-3.webp' => ['nombre' => 'Carmen Ríos', 'cargo' => 'Ing. Kaizen'],
-                            'equipo-4.webp' => ['nombre' => 'Daniel Mata', 'cargo' => 'Ing. de Diseño Mecánico'],
-                            'equipo-5.webp' => ['nombre' => 'Gael Rangel', 'cargo' => 'Ing. de Automatización Jr.'],
-                            'equipo-6.webp' => ['nombre' => 'Karen Rodríguez', 'cargo' => 'Ing. Logística y compras técnicas'],
-                            'equipo-7.webp' => ['nombre' => 'Luis Jiménez', 'cargo' => 'Ing. de Programación'],
+                            'equipo-4.webp' => ['nombre' => 'Carmen Ríos', 'cargo' => 'Ing. Kaizen'],
+                            'equipo-5.webp' => ['nombre' => 'Daniel Mata', 'cargo' => 'Ing. de Diseño Mecánico'],
+                            'equipo-6.webp' => ['nombre' => 'Gael Rangel', 'cargo' => 'Ing. de Automatización Jr.'],
+                            'equipo-7.webp' => ['nombre' => 'Karen Rodríguez', 'cargo' => 'Ing. Logística y compras técnicas'],
+                            'equipo-3.webp' => ['nombre' => 'Luis Jiménez', 'cargo' => 'Ing. de Programación'],
                         ];
                     
                         $imagenes_equipo = array();
@@ -204,7 +204,7 @@
             
             <div class="w-full max-w-[1140px] relative z-10 flex flex-col items-center">
                 <!-- Título -->
-                <h2 class="text-[28px] md:text-[36px] text-white text-center mb-[60px] md:mb-[80px]">Ingeniería, Automatización y Control para la Industria</h2>
+                <h2 class="text-[28px] md:text-[36px] text-white text-center mb-[60px] md:mb-[80px]">Ingeniería, automatización y control para la Industria.</h2>
 
                 <div class="my-[80px] flex flex-col gap-y-[80px]">
                     
