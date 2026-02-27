@@ -8,7 +8,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
-        <img src="<?= importAsset('/logo-teven-blanco.png') ?>" alt="Logo Teven" class="h-10 w-auto"/>
+        <img src="<?= importAsset('apple-icon-144x144.png') ?>" alt="Logo Teven" class="h-10 w-auto rounded-md"/>
         <label>Bienvenido, <span class="font-bold"><br class="lg:hidden"><?= $USUARIO['nombre'] ?></span></label>
     </div>
     <a class="px-3 lg:px-4 py-2  text-white font-bold rounded-lg border-white border text-xs lg:text-base
