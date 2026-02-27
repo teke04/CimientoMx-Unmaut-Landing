@@ -356,7 +356,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <label>Integración de Conveyors..</label>
+                                    <label>Integración de Conveyors.</label>
                                 </li>
                                 <li class="flex flex-row gap-x-[10px] items-center">
                                     <svg class="min-h-[30px] min-w-[30px] [&_svg>g>path]:group-hover:fill-[#504696]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -382,7 +382,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <label>Integración de Atornilladores</label>
+                                    <label>Integración de Atornilladores.</label>
                                 </li>
                             </ul>
                         </div>
@@ -473,7 +473,7 @@
                                                 </clipPath>
                                             </defs>
                                         </svg>
-                                        <label>Conexión de Tableros Eléctricos..</label>
+                                        <label>Conexión de Tableros Eléctricos.</label>
                                     </li>
                                     <li class="flex flex-row gap-x-[10px] items-center">
                                         <svg class="min-h-[30px] min-w-[30px]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -486,7 +486,7 @@
                                                 </clipPath>
                                             </defs>
                                         </svg>
-                                        <label>Desconexión y Reconexión de Cableados Eléctricos..</label>
+                                        <label>Desconexión y Reconexión de Cableados Eléctricos.</label>
                                     </li>
                                 </ul>
                             </div>
@@ -825,7 +825,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <span>Compromiso, constancia y disciplina..</span>
+                                <span>Compromiso, constancia y disciplina.</span>
                             </li>
                         </ul>
                     </div>
