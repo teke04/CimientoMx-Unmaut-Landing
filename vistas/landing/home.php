@@ -123,13 +123,13 @@
                     <?php 
                         // Datos de los miembros del equipo
                         $equipo_datos = [
-                            'equipo-1.webp' => ['nombre' => 'Marco González', 'cargo' => 'Director Ejecutivo'],
-                            'equipo-2.webp' => ['nombre' => 'Juan Peñuñuri', 'cargo' => 'Director Operativo'],
-                            'equipo-4.webp' => ['nombre' => 'Carmen Ríos', 'cargo' => 'Ing. Kaizen'],
-                            'equipo-5.webp' => ['nombre' => 'Daniel Mata', 'cargo' => 'Ing. de Diseño Mecánico'],
-                            'equipo-6.webp' => ['nombre' => 'Gael Rangel', 'cargo' => 'Ing. de Automatización Jr.'],
-                            'equipo-7.webp' => ['nombre' => 'Karen Rodríguez', 'cargo' => 'Ing. Logística y compras técnicas'],
-                            'equipo-3.webp' => ['nombre' => 'Luis Jiménez', 'cargo' => 'Ing. de Programación'],
+                            'marco-gonzales.webp' => ['nombre' => 'Marco González', 'cargo' => 'Director Ejecutivo'],
+                            'juan-peñuñuri.webp' => ['nombre' => 'Juan Peñuñuri', 'cargo' => 'Director Operativo'],
+                            'carmen-rios.webp' => ['nombre' => 'Carmen Ríos', 'cargo' => 'Ing. Kaizen'],
+                            'daniel-mata.webp' => ['nombre' => 'Daniel Mata', 'cargo' => 'Ing. de Diseño Mecánico'],
+                            'gael-rangel.webp' => ['nombre' => 'Gael Rangel', 'cargo' => 'Ing. de Automatización Jr.'],
+                            'karen-rodriguez.webp' => ['nombre' => 'Karen Rodríguez', 'cargo' => 'Ing. Logística y compras técnicas'],
+                            'luis-jimenez.webp' => ['nombre' => 'Luis Jiménez', 'cargo' => 'Ing. de Programación'],
                         ];
                     
                         $imagenes_equipo = array();
